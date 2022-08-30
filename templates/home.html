@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SyteWords</title>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet" />
 
@@ -16,6 +13,7 @@
             padding-top: 50px;
         }
     </style>
+
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js">
     </script>
@@ -26,26 +24,37 @@
     <main>
         <div>
             <h1 class="text-center p-5">SyteWords</h1>
-            <hr class="my-4" />
-            <h1 class="text-center display-1">
+            <div class="d-flex justify-content-evenly" role="group" aria-label="Basic example">
+                <form action="/prekwords" method="post">
+                    <button type=" button " class="btn btn-primary " name="prekwords" value="prekwords">Pre-K Words</button>
+                </form>
+                <form action="/kwords" method="post">
+                    <button type=" button " class="btn btn-primary " name="kwords" value="kwords">K Words</button>
+                </form>
+                <form action="/winterwords" method="post">
+                    <button type=" button " class="btn btn-primary " name="winterwords" value="winterwords">Winter Words</button>
+                </form>
+            </div>
+            <hr class="my-4 " />
+            <h1 class="text-center display-1 ">
                 <strong>{{ words[index]}} </strong>
             </h1>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center ">
             <form action="/back" method="post">
-                <button class="btn btn-primary btn-lg m-2" name="back" value="back">back</button>
+                <button class="btn btn-primary btn-lg m-2 " name="back" value="back">back</button>
             </form>
             <form action="/next" method="post">
-                <button class="btn btn-primary btn-lg m-2" name="next" value="next">next</button>
+                <button class="btn btn-primary btn-lg m-2 " name="next" value="next">next</button>
             </form>
             <form action="/shuffle" method="post">
-                <button class="btn btn-primary btn-lg m-2" name="shuffle" value="shuffle">shuffle</button>
+                <button class="btn btn-primary btn-lg m-2 " name="shuffle" value="shuffle">shuffle</button>
             </form>
         </div>
     </main>
 </body>
 <footer>
-    <p class="text-center text-muted">© Copyright 2022 SyteWords</p>
+    <p class="text-center text-muted ">© Copyright 2022 SyteWords</p>
 </footer>
 
 </html>
